@@ -1,3 +1,5 @@
+package misionespacial;
+
 import misionespacial.SistemaComunicaciones;
 import misionespacial.SistemaControlTermico;
 import misionespacial.SistemaNavegacion;
@@ -7,7 +9,7 @@ import java.util.concurrent.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("🚀 Simulación de misión espacial iniciada...");
+        System.out.println(" Simulación de misión espacial iniciada...");
 
         ExecutorService executor = Executors.newFixedThreadPool(4);
 
@@ -22,6 +24,6 @@ public class Main {
         System.out.println(termico.get());
 
         executor.shutdown();
-        System.out.println("✅ Todos los sistemas reportan estado operativo.");
+        System.out.println(" Todos los sistemas reportan estado operativo.");
     }
 }

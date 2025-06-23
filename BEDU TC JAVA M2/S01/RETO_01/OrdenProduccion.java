@@ -1,4 +1,6 @@
 
+package S01.RETO_01;
+
 public abstract class OrdenProduccion {
     private final String codigo;
     private final int cantidad;

@@ -5,18 +5,18 @@ import java.util.*;
 public class GestionOrdenes {
 
     public static void mostrarOrdenes(List<? extends OrdenProduccion> lista) {
-        System.out.println("\n📋 Órdenes registradas:");
+        System.out.println("\n Órdenes registradas:");
         for (OrdenProduccion orden : lista) {
             orden.mostrarResumen();
         }
     }
 
     public static void procesarPersonalizadas(List<? super OrdenPersonalizada> lista, int costoAdicional) {
-        System.out.println("\n💰 Procesando órdenes personalizadas...");
+        System.out.println("\n Procesando órdenes personalizadas...");
         for (Object obj : lista) {
             if (obj instanceof OrdenPersonalizada) {
                 OrdenPersonalizada op = (OrdenPersonalizada) obj;
-                System.out.println("✅ Orden " + op.getCodigo() + " ajustada con costo adicional de $" + costoAdicional);
+                System.out.println(" Orden " + op.getCodigo() + " ajustada con costo adicional de $" + costoAdicional);
             }
         }
     }
@@ -27,10 +27,10 @@ public class GestionOrdenes {
         long personalizadas = lista.stream().filter(o -> o instanceof OrdenPersonalizada).count();
         long prototipos = lista.stream().filter(o -> o instanceof OrdenPrototipo).count();
 
-        System.out.println("\n📊 Resumen total de órdenes:");
-        System.out.println("🔧 Producción en masa: " + masas);
-        System.out.println("🛠️ Personalizadas: " + personalizadas);
-        System.out.println("🧪 Prototipos: " + prototipos);
+        System.out.println("\n Resumen total de órdenes:");
+        System.out.println(" Producción en masa: " + masas);
+        System.out.println(" Personalizadas: " + personalizadas);
+        System.out.println(" Prototipos: " + prototipos);
     }
 
     public static void main(String[] args) {
@@ -64,7 +64,7 @@ public class GestionOrdenes {
         // Procesar órdenes personalizadas
         procesarPersonalizadas(personalizadas, 200);
 
-        // 🚀 Código de desafío opcional: contar órdenes por tipo
+        // Código de desafío opcional: contar órdenes por tipo
         contarOrdenes(todasLasOrdenes);
     }
 }
